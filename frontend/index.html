@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Comparator | Flight vs Train</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="header">
+        <h1><span>🚆 vs ✈️</span> Travel Comparator</h1>
+        <p>Find the fastest way between Pune and Mumbai</p>
+    </div>
+
+    <div class="main-container">
+        <!-- Input Section -->
+        <div class="search-card">
+            <div class="field">
+                <label for="travelDate">When are you traveling?</label>
+                <input type="date" id="travelDate" />
+            </div>
+
+            <div class="button-group">
+                <button id="flightBtn" class="btn-flight">✈️ Get Flight</button>
+                <button id="trainBtn" class="btn-train">🚆 Get Train</button>
+            </div>
+            <button id="compareBtn" class="btn-compare">🏆 Find Fastest Overall</button>
+        </div>
+
+        <!-- Result Section -->
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Searching APIs...</p>
+        </div>
+        
+        <div id="result">
+            <!-- Results will be injected here as cards -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
