@@ -2,7 +2,7 @@ const resultDiv = document.getElementById("result");
 const dateInput = document.getElementById("travelDate");
 const loader = document.getElementById("loader");
 
-// Set default date to today
+
 const today = new Date().toISOString().split("T")[0];
 dateInput.min = today;
 dateInput.value = today;
@@ -19,7 +19,7 @@ async function fetchAndShow(url, isCompare = false) {
 
         if (!res.ok) throw new Error(data.message || "API failed");
 
-        // ✅ FIXED HERE
+    
         const displayData = isCompare ? data.details : data;
         showResult(displayData);
 
@@ -65,7 +65,7 @@ function showResult(data) {
     `;
 }
 
-// Event Listeners
+
 document.getElementById("flightBtn").addEventListener("click", () => {
     fetchAndShow(
         `http://localhost:5000/api/flights/fastest?date=${dateInput.value}`
