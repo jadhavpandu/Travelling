@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Monitor | Flight & Train</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>✈️ Travel Monitor 🚆</h1>
+        <p>Compare Flights (Amadeus) and Trains (RapidAPI) in one place</p>
+    </div>
+
+    <div class="container">
+        <!-- Search Form -->
+        <div class="search-section">
+            <div class="input-group">
+                <input type="text" id="from" placeholder="Origin (e.g. NYC)" required>
+                <input type="text" id="to" placeholder="Destination (e.g. LON)" required>
+                <input type="date" id="date" required>
+                <button id="searchBtn">Search Trips</button>
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div id="loader" class="hidden">Searching for best prices...</div>
+
+        <!-- Results Grid -->
+        <div class="results-grid">
+            <section>
+                <h2>Available Flights</h2>
+                <div id="flightResults" class="results-container">
+                    <p class="placeholder">Search to see flight options</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Available Trains</h2>
+                <div id="trainResults" class="results-container">
+                    <p class="placeholder">Search to see train options</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
